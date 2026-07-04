@@ -1,0 +1,78 @@
+    :root {
+      --cream: #f7f1e3;
+      --text-dark: #4a4a4a;
+      --accent: #d8a96c;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica", "Arial", sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.8;
+    }
+
+    /* 背景：家具を並べたようなインテリア風背景 */
+    .interior-bg {
+      position: fixed;
+      inset: 0;
+      background-image:
+        url('https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?auto=format&fit=crop&w=800&q=80'),
+        url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=80'),
+        url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80');
+      background-size: 30%, 25%, 20%;
+      background-repeat: no-repeat;
+      background-position: left 5% bottom 10%, right 10% top 15%, left 50% top 30%;
+      opacity: 0.18;
+      z-index: -1;
+    }
+
+    header {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--accent);
+      padding-left: 12px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    /* 画面遷移アニメーション */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
